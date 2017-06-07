@@ -9,9 +9,9 @@ namespace ApVentaDatos
 {
     public class UsuarioDatos
     {
-        public UsuarioDTO GetUsuario(UsuarioDTO usuario)
+        public bool GetUsuario(UsuarioDTO usuario)
         {
-            throw new NotImplementedException(); 
+            return true;
         }
     }
 }
