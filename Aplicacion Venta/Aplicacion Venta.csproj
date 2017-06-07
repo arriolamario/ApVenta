@@ -86,6 +86,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApVentaContracts\ApVentaContracts.csproj">
+      <Project>{2d70fc9e-33a9-44b6-a078-4c5f51b990d0}</Project>
+      <Name>ApVentaContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ApVentaLogica\ApVentaLogica.csproj">
+      <Project>{b892e00e-5edb-48f6-895b-77c7d0c00fae}</Project>
+      <Name>ApVentaLogica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

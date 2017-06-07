@@ -12,6 +12,7 @@ namespace Aplicacion_Venta.Forms
 {
     public partial class frmPrincipal : Form
     {
+        bool login;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -21,5 +22,24 @@ namespace Aplicacion_Venta.Forms
         {
 
         }
+
+        private void btnLoginLogOut_Click(object sender, EventArgs e)
+        {
+            if (login)
+            {
+                //abrimos dialogo de preguntar si quiere cerrar sesion
+                login = !login;
+                btnLoginLogOut.Text = "Cerrar Sesion";
+            }
+            else
+            {
+                //abrimos form para login
+                login = !login;
+                btnLoginLogOut.Text = "Iniciar Sesion";
+
+                
+            }
+        }
+
     }
 }
