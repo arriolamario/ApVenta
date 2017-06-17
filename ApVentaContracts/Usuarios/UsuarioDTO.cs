@@ -12,6 +12,5 @@ namespace ApVentaContracts.Usuarios
 
         public string usuario { get; set; }
         public string contraseña { get; set; }
-
     }
 }

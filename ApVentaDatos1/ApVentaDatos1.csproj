@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B892E00E-5EDB-48F6-895B-77C7D0C00FAE}</ProjectGuid>
+    <ProjectGuid>{ED860035-32F2-4AC7-9DA2-05CDB8DFC56B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ApVentaLogica</RootNamespace>
-    <AssemblyName>ApVentaLogica</AssemblyName>
+    <RootNamespace>ApVentaDatos1</RootNamespace>
+    <AssemblyName>ApVentaDatos1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +34,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,26 +44,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="EntidadBase.cs" />
+    <Compile Include="EntidadUsuario.cs" />
+    <Compile Include="IEntidad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario.cs" />
-    <Compile Include="Usuarios\GestionUsuario.cs" />
+    <Compile Include="SqlConexion.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ApVentaContracts\ApVentaContracts.csproj">
       <Project>{2d70fc9e-33a9-44b6-a078-4c5f51b990d0}</Project>
       <Name>ApVentaContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ApVentaDatos1\ApVentaDatos1.csproj">
-      <Project>{ed860035-32f2-4ac7-9da2-05cdb8dfc56b}</Project>
-      <Name>ApVentaDatos1</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ApVentaDatos\ApVentaDatos.csproj">
-      <Project>{2177dc27-aaa9-4655-851b-c1ab9b84726c}</Project>
-      <Name>ApVentaDatos</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' == ''" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>2.0</SsdtUnitTestVersion>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
