@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ApVentaDatos1;
 using ApVentaContracts.Usuarios;
+using ApVentaDatos.Entidades;
 
 namespace Entidad.Test
 {
@@ -15,8 +15,8 @@ namespace Entidad.Test
 
             UsuarioDTO usuario = new UsuarioDTO();
 
-            usuario.usuario = "NomUsuario";
-            usuario.contraseña = "RAN001";
+            usuario.Username = "NomUsuario";
+            usuario.Password = "RAN001";
 
             entidad.entidad = usuario;
 

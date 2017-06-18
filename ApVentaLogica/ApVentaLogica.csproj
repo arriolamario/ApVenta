@@ -49,10 +49,6 @@
       <Project>{2d70fc9e-33a9-44b6-a078-4c5f51b990d0}</Project>
       <Name>ApVentaContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ApVentaDatos1\ApVentaDatos1.csproj">
-      <Project>{ed860035-32f2-4ac7-9da2-05cdb8dfc56b}</Project>
-      <Name>ApVentaDatos1</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ApVentaDatos\ApVentaDatos.csproj">
       <Project>{2177dc27-aaa9-4655-851b-c1ab9b84726c}</Project>
       <Name>ApVentaDatos</Name>

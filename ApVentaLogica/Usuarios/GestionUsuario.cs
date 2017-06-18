@@ -20,7 +20,7 @@ namespace ApVentaLogica.Usuarios
         public ConsultaUsuario IniciarSesion(UsuarioDTO user)
         {
             var retorno = new ConsultaUsuario();
-            if (!String.IsNullOrEmpty(user.usuario) || !String.IsNullOrEmpty(user.contraseña))
+            if (!String.IsNullOrEmpty(user.Username) || !String.IsNullOrEmpty(user.Password))
             {
                 retorno.valido = false;
                 retorno.mensaje = "Usuario y/o Contraseña no pueden ser vacios.";

@@ -25,8 +25,8 @@ namespace Aplicacion_Venta.Forms
             var contraseña = tbContraseña.Text;
             UsuarioDTO user = new UsuarioDTO()
             {
-                usuario = tbUsuario.Text,
-                contraseña = tbContraseña.Text
+                Username = tbUsuario.Text,
+                Password = tbContraseña.Text
             };
 
             var gestion = new GestionUsuario();
