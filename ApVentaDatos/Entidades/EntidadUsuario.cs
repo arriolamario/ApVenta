@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ApVentaContracts.Usuarios;
 using ApVentaContracts.Interfaces;
+using System.Data;
 
 namespace ApVentaDatos.Entidades
 {
@@ -73,8 +74,6 @@ namespace ApVentaDatos.Entidades
             lista.Add(new SqlParameter("apellido", entidad.Apellido));
             lista.Add(new SqlParameter("username", entidad.Username));
             lista.Add(new SqlParameter("password", entidad.Password));
-            //lista.Add(new SqlParameter("documento", entidad.Documento));
-            //lista.Add(new SqlParameter("estado", entidad.estado));
         }
 
         private void CargarParametrosUpdateOrDelete(List<SqlParameter> lista)
@@ -84,13 +83,21 @@ namespace ApVentaDatos.Entidades
             lista.Add(new SqlParameter("apellido", entidad.Apellido));
             lista.Add(new SqlParameter("username", entidad.Username));
             lista.Add(new SqlParameter("password", entidad.Password));
-            //lista.Add(new SqlParameter("documento", entidad.Documento));
-            //lista.Add(new SqlParameter("estado", entidad.estado));
         }
 
         private void CargarParametrosSelect(List<SqlParameter> lista)
         {
             lista.Add(new SqlParameter("idUsuario", entidad.IdUsuario));
+        }
+
+        public override UsuarioDTO GetEntidad(DataTable dataTable)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<UsuarioDTO> GetListaEntidad(DataTable dataTable)
+        {
+            throw new NotImplementedException();
         }
     }
 }

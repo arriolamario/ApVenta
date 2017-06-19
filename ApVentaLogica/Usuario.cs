@@ -31,5 +31,15 @@ namespace ApVentaLogica
         {
             throw new NotImplementedException();
         }
+
+        public override UsuarioDTO GetEntidad(System.Data.DataTable dataTable)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<UsuarioDTO> GetListaEntidad(System.Data.DataTable dataTable)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
