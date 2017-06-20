@@ -1,12 +1,13 @@
-﻿using System;
+﻿using ApVentaContracts.Usuarios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApVentaContracts.Usuarios
+namespace ApVentaContracts
 {
-    public class ConsultaUsuario
+    public class Consulta
     {
         public UsuarioDTO usuario { get; set; }
 

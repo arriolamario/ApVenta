@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ApVentaContracts.Interfaces;
 using System.Data;
+using ApVentaContracts.Enumerados;
 
 namespace ApVentaDatos.Entidades
 {

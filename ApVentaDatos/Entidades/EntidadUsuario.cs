@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using ApVentaContracts.Usuarios;
 using ApVentaContracts.Interfaces;
 using System.Data;
+using ApVentaContracts.Enumerados;
 
 namespace ApVentaDatos.Entidades
 {
@@ -50,16 +51,19 @@ namespace ApVentaDatos.Entidades
             switch (movimiento)
             {
                 case MovimientoBase.Insert:
-                    nombreSp = "";
+                    nombreSp = "usuarioInsert";
                     break;
                 case MovimientoBase.Update:
-                    nombreSp = "";
+                    nombreSp = "usuarioUpdate";
                     break;
                 case MovimientoBase.Select:
-                    nombreSp = "";
+                    nombreSp = "usuarioSelectId";
                     break;
                 case MovimientoBase.SelectAll:
-                    nombreSp = "";
+                    nombreSp = "usuarioSelect";
+                    break;
+                case MovimientoBase.Delete:
+                    nombreSp = "usuarioDelete";
                     break;
                 default:
                     break;

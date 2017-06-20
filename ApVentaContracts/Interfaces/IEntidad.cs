@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApVentaContracts.Enumerados;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -20,12 +21,6 @@ namespace ApVentaContracts.Interfaces
         List<TT> GetListaEntidad(DataTable dataTable);
     }
 
-    public enum MovimientoBase{
-        Insert,
-        Update,
-        Select,
-        SelectAll,
-        Delete
-    }
+    
    
 }

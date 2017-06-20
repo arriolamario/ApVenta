@@ -39,8 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enumerados\Enumerados.cs" />
     <Compile Include="Interfaces\IEntidad.cs" />
-    <Compile Include="Usuarios\ConsultaUsuario.cs" />
+    <Compile Include="Consulta.cs" />
     <Compile Include="Usuarios\UsuarioDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -43,7 +43,6 @@
     <Compile Include="Entidades\EntidadBase.cs" />
     <Compile Include="Entidades\EntidadUsuario.cs" />
     <Compile Include="SqlConexion.cs" />
-    <Compile Include="UsuarioDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

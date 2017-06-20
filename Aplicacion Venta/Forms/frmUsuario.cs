@@ -1,4 +1,5 @@
-﻿using ApVentaContracts.Usuarios;
+﻿using ApVentaContracts;
+using ApVentaContracts.Usuarios;
 using ApVentaLogica.Usuarios;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace Aplicacion_Venta.Forms
 {
     public partial class frmUsuario : Form
     {
-        private ConsultaUsuario result;
+        private Consulta result;
         private frmPrincipal frmPrincipal;
 
         public frmUsuario(frmPrincipal frmPrincipal)

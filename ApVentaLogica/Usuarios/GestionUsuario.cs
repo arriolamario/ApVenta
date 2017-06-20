@@ -1,5 +1,7 @@
-﻿using ApVentaContracts.Usuarios;
+﻿using ApVentaContracts;
+using ApVentaContracts.Usuarios;
 using ApVentaDatos;
+using ApVentaDatos.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +12,16 @@ namespace ApVentaLogica.Usuarios
 {
     public class GestionUsuario
     {
-        UsuarioDatos usuarioDatos;
+        EntidadUsuario enUsuario;
 
         public GestionUsuario()
         {
-            usuarioDatos = new UsuarioDatos();
+            enUsuario = new EntidadUsuario();
         }
 
-        public ConsultaUsuario IniciarSesion(UsuarioDTO user)
+        public Consulta IniciarSesion(UsuarioDTO user)
         {
-            var retorno = new ConsultaUsuario();
+            Consulta retorno = new Consulta();
             if (String.IsNullOrEmpty(user.Username) || String.IsNullOrEmpty(user.Password))
             {
                 retorno.valido = false;
@@ -27,17 +29,18 @@ namespace ApVentaLogica.Usuarios
             }
             else
             {
-                if (usuarioDatos.GetUsuario(user))
+                enUsuario.entidad = user;
+                List<UsuarioDTO> usuarios = enUsuario.SelectAll();
+                retorno.usuario = usuarios.FirstOrDefault(x => x.Username == user.Username && x.Password == user.Password);
+                if (retorno.usuario != null)
                 {
                     retorno.valido = true;
-                    retorno.usuario = user;
                 }
                 else
                 {
                     retorno.valido = false;
                     retorno.mensaje = "Inicio Sesion incorrecto, usuario y/o contraseña incorrecto";
                 }
-
             }
 
             return retorno;
