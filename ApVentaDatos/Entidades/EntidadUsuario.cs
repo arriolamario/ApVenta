@@ -90,14 +90,27 @@ namespace ApVentaDatos.Entidades
             lista.Add(new SqlParameter("idUsuario", entidad.IdUsuario));
         }
 
-        public override UsuarioDTO GetEntidad(DataTable dataTable)
-        {
-            throw new NotImplementedException();
-        }
-
         public override List<UsuarioDTO> GetListaEntidad(DataTable dataTable)
         {
-            throw new NotImplementedException();
+            List<UsuarioDTO> lista = new List<UsuarioDTO>();
+
+            foreach (DataRow item in dataTable.Rows)
+            {
+                lista.Add(GetEntidad(item));
+            }
+
+            return lista;
+        }
+
+        public override UsuarioDTO GetEntidad(DataRow row)
+        {
+            UsuarioDTO usuario = new UsuarioDTO();
+            usuario.Apellido = Convert.ToString(row["apellido"]);
+            usuario.IdUsuario = Convert.ToInt32(row["idUsuario"]);
+            usuario.Nombre = Convert.ToString(row["nombre"]);
+            usuario.Password = Convert.ToString(row["password"]);
+            usuario.Username = Convert.ToString(row["username"]);
+            return usuario;
         }
     }
 }

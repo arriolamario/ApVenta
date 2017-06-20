@@ -48,7 +48,7 @@
             this.btnLoginLogOut.Name = "btnLoginLogOut";
             this.btnLoginLogOut.Size = new System.Drawing.Size(75, 57);
             this.btnLoginLogOut.TabIndex = 0;
-            this.btnLoginLogOut.Text = "button1";
+            this.btnLoginLogOut.Text = "Iniciar Sesion";
             this.btnLoginLogOut.UseVisualStyleBackColor = true;
             this.btnLoginLogOut.Click += new System.EventHandler(this.btnLoginLogOut_Click);
             // 

@@ -47,7 +47,8 @@ namespace ApVentaDatos.Entidades
             string nombreSP = GetNombreSp(MovimientoBase.Select);
             SqlParameter[] parametros = GetParametros(MovimientoBase.Select);
             DataTable dt = sql.ExecuteDataAdapter(nombreSP, parametros);
-            return GetEntidad(dt);
+            DataRow row = dt.Rows[0];
+            return GetEntidad(row);
         }
 
         public List<TT> SelectAll()
@@ -57,15 +58,15 @@ namespace ApVentaDatos.Entidades
             DataTable dt = sql.ExecuteDataAdapter(nombreSP, parametros);
             return GetListaEntidad(dt);
         }
+
         public abstract SqlParameter[] GetParametros(MovimientoBase movimiento);
 
         public abstract TT entidad { get; set; }
 
         public abstract string GetNombreSp(MovimientoBase movimiento);
 
-
-        public abstract TT GetEntidad(DataTable dataTable);
-
         public abstract List<TT> GetListaEntidad(DataTable dataTable);
+
+        public abstract TT GetEntidad(DataRow row);
     }
 }

@@ -15,7 +15,7 @@ namespace ApVentaContracts.Interfaces
 
         SqlParameter[] GetParametros(MovimientoBase movimiento);
 
-        TT GetEntidad(DataTable dataTable);
+        TT GetEntidad(DataRow row);
 
         List<TT> GetListaEntidad(DataTable dataTable);
     }

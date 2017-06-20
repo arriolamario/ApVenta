@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApVentaContracts.Usuarios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,12 @@ namespace Aplicacion_Venta.Forms
 {
     public partial class frmPrincipal : Form
     {
-        bool login;
+        public bool login;
+        public UsuarioDTO usuario; 
         public frmPrincipal()
         {
             InitializeComponent();
+            usuario = new UsuarioDTO();
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -28,14 +31,16 @@ namespace Aplicacion_Venta.Forms
             if (login)
             {
                 //abrimos dialogo de preguntar si quiere cerrar sesion
-                login = !login;
-                btnLoginLogOut.Text = "Cerrar Sesion";
+                DialogResult result =  MessageBox.Show("Esta por cerrar sesion, desea continuar", Constantes.K_CerrarSesion, MessageBoxButtons.YesNo);
+
+                login = result != DialogResult.Yes;
+                btnLoginLogOut.Text = login ? Constantes.K_CerrarSesion : Constantes.K_IniciarSesion;
             }
             else
             {
                 //abrimos form para login
-                login = !login;
-                btnLoginLogOut.Text = "Iniciar Sesion";
+                var result = new frmUsuario(this).ShowDialog();
+                btnLoginLogOut.Text = login ? Constantes.K_CerrarSesion : Constantes.K_IniciarSesion;
 
                 
             }

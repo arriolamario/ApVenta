@@ -14,9 +14,24 @@ namespace Aplicacion_Venta.Forms
 {
     public partial class frmUsuario : Form
     {
-        public frmUsuario()
+        private ConsultaUsuario result;
+        private frmPrincipal frmPrincipal;
+
+        public frmUsuario(frmPrincipal frmPrincipal)
         {
+            // TODO: Complete member initialization
             InitializeComponent();
+            this.frmPrincipal = frmPrincipal;
+        }
+
+        void frmUsuario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        void frmUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,11 +46,13 @@ namespace Aplicacion_Venta.Forms
 
             var gestion = new GestionUsuario();
 
-            var result = gestion.IniciarSesion(user);
+             result = gestion.IniciarSesion(user);
 
             if (result.valido)
             {
-                MessageBox.Show("Login correcto");
+                this.frmPrincipal.login = result.valido;
+                this.frmPrincipal.usuario = result.usuario;
+                this.Close();
             }
             else
             {
@@ -43,8 +60,6 @@ namespace Aplicacion_Venta.Forms
             }
 
         }
-
-        
 
     }
 }
