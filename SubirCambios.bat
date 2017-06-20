@@ -12,4 +12,5 @@ git pull
 
 git push
 
+pause
 exit
