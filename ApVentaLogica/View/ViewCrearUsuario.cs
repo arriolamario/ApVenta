@@ -9,8 +9,6 @@ namespace ApVentaLogica.View
 {
     public static class ViewCrearUsuario
     {
-
-
         private static void InitializeComponent(Panel principal)
         {
             Panel pnlBotonesCrearUsuario;
@@ -168,6 +166,5 @@ namespace ApVentaLogica.View
             pnlContenidoCrearUsuario.ResumeLayout(false);
             pnlContenidoCrearUsuario.PerformLayout();
         }
-
     }
 }
