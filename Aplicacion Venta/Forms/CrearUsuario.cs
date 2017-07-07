@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Aplicacion_Venta.Forms
 {
-    public partial class FormCrearUsuario : frmPrincipal
+    public partial class CrearUsuario : UserControl
     {
-        public FormCrearUsuario()
+        public CrearUsuario()
         {
             InitializeComponent();
         }
 
-        private void pnlContenidoCrearUsuario_Paint(object sender, PaintEventArgs e)
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearUsuario_Load(object sender, EventArgs e)
         {
 
         }

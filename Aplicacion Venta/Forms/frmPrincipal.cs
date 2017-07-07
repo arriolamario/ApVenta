@@ -21,11 +21,18 @@ namespace Aplicacion_Venta.Forms
         {
             InitializeComponent();
             usuario = new UsuarioDTO();
+            CargarDatos();
+        }
+
+        private void CargarDatos()
+        {
+            lblPie.Text = "Sistema Venta " + DateTime.Now.Year;
+
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            pnlLeft.Controls.AddRange(ViewPrincipal.GetBotonesPanelLeft(Roles.Administrador));
+            //pnlLeft.Controls.AddRange(ViewPrincipal.GetBotonesPanelLeft(Roles.Administrador));
         }
 
         private void btnLoginLogOut_Click(object sender, EventArgs e)
@@ -37,20 +44,45 @@ namespace Aplicacion_Venta.Forms
 
                 login = result != DialogResult.Yes;
                 btnLoginLogOut.Text = login ? Constantes.K_CerrarSesion : Constantes.K_IniciarSesion;
-                pnlDatosUsuario.Visible = login;
+                //pnlDatosUsuario.Visible = login;
             }
             else
             {
                 //abrimos form para login
                 var result = new frmUsuario(this).ShowDialog();
                 btnLoginLogOut.Text = login ? Constantes.K_CerrarSesion : Constantes.K_IniciarSesion;
-                pnlDatosUsuario.Visible = login;
+                //pnlDatosUsuario.Visible = login;
                 if (login)
                 {
                     lblApellido.Text = usuario.Apellido;
                     lblNombre.Text = usuario.Nombre;
                 }
             }
+        }
+
+        private void pnlDatosUsuario_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Button b = (sender as Button);
+            CrearUsuario panel = new CrearUsuario();
+            panel.Dock = DockStyle.Fill;
+
+            pnlCenter.Controls.Clear();
+
+            pnlCenter.Controls.Add(panel);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            CrearUsuario crearUsuario = new CrearUsuario();
+            crearUsuario.Dock = DockStyle.Fill;
+
+            pnlCenter.Controls.Clear();
+            pnlCenter.Controls.Add(crearUsuario);
         }
     }
 }

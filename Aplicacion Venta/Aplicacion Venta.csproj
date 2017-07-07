@@ -63,6 +63,12 @@
     <Compile Include="Forms\frmUsuario.Designer.cs">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CrearUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CrearUsuario.Designer.cs">
+      <DependentUpon>CrearUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FormCrearUsuario.resx">
@@ -73,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CrearUsuario.resx">
+      <DependentUpon>CrearUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
