@@ -16,15 +16,5 @@ namespace Aplicacion_Venta.Forms
         {
             InitializeComponent();
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CrearUsuario_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

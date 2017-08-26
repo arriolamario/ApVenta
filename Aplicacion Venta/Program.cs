@@ -1,4 +1,5 @@
 ﻿using Aplicacion_Venta.Forms;
+using Aplicacion_Venta.Prueba;
 using Aplicacion_Venta.Usuario;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace Aplicacion_Venta
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCrearUsuario());
+            Application.Run(new frmPrincipalTest());
         }
     }
 }

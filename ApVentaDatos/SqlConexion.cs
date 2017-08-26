@@ -8,7 +8,7 @@ using System.Text;
 
 namespace ApVentaDatos
 {
-    public class SqlConexion
+    public class SqlConexion : IDisposable
     {
         /// <summary>
         /// Para insertar, update y delete.
@@ -70,5 +70,10 @@ namespace ApVentaDatos
             }
         }
 
+
+        public void Dispose()
+        {
+            
+        }
     }
 }

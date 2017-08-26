@@ -40,11 +40,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FactoryValidador\FactoryValidador.cs" />
     <Compile Include="Infra.cs" />
+    <Compile Include="IValidador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextBoxEx.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FactoryValidador\ValidadorTodo.cs" />
+    <Compile Include="FactoryValidador\ValidadorLetrasNumeros.cs" />
+    <Compile Include="FactoryValidador\ValidadorSoloLetras.cs" />
+    <Compile Include="FactoryValidador\ValidadorSoloNumeros.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApInfra\ApInfra.csproj">
+      <Project>{1e6dcc20-9ef6-4fcb-8e93-4c8567e4d439}</Project>
+      <Name>ApInfra</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interface\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

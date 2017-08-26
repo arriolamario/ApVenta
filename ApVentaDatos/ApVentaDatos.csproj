@@ -40,8 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entidades\EntidadBase.cs" />
-    <Compile Include="Entidades\EntidadUsuario.cs" />
+    <Compile Include="EntidadBase.cs" />
     <Compile Include="SqlConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

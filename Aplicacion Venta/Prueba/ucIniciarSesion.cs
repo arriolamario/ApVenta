@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Aplicacion_Venta.Forms
+namespace Aplicacion_Venta.Prueba
 {
-    public partial class FormCrearUsuario : frmPrincipal
+    public partial class ucIniciarSesion : UserControl
     {
-        public FormCrearUsuario()
+        public ucIniciarSesion()
         {
             InitializeComponent();
         }
 
-        private void pnlContenidoCrearUsuario_Paint(object sender, PaintEventArgs e)
+        private void btnIniciar_Click(object sender, EventArgs e)
         {
 
         }

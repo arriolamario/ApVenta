@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidad.Test", "Entidad.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlesPersonalizados", "ControlesPersonalizados\ControlesPersonalizados.csproj", "{3346B5C1-85B0-42DE-BB55-6856263975DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApInfra", "ApInfra\ApInfra.csproj", "{1E6DCC20-9EF6-4FCB-8E93-4C8567E4D439}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{3346B5C1-85B0-42DE-BB55-6856263975DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3346B5C1-85B0-42DE-BB55-6856263975DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3346B5C1-85B0-42DE-BB55-6856263975DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E6DCC20-9EF6-4FCB-8E93-4C8567E4D439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6DCC20-9EF6-4FCB-8E93-4C8567E4D439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6DCC20-9EF6-4FCB-8E93-4C8567E4D439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6DCC20-9EF6-4FCB-8E93-4C8567E4D439}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

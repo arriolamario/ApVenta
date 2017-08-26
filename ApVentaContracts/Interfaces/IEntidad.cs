@@ -21,6 +21,16 @@ namespace ApVentaContracts.Interfaces
         List<TT> GetListaEntidad(DataTable dataTable);
     }
 
+
+    public interface IEntidad
+    {
+        string GetNombreSp(MovimientoBase movimiento);
+
+        SqlParameter[] GetParametros(MovimientoBase movimiento);
+
+        IEntidad MapEntidad(DataRow row);
+    }
+
     
    
 }

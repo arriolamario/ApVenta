@@ -45,23 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constantes.cs" />
-    <Compile Include="Forms\FormCrearUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormCrearUsuario.Designer.cs">
-      <DependentUpon>FormCrearUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmUsuario.Designer.cs">
-      <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CrearUsuario.cs">
       <SubType>UserControl</SubType>
@@ -71,20 +59,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prueba\frmPrincipalTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prueba\frmPrincipalTest.Designer.cs">
+      <DependentUpon>frmPrincipalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prueba\ucIniciarSesion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Prueba\ucIniciarSesion.Designer.cs">
+      <DependentUpon>ucIniciarSesion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario\frmCrearUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Usuario\frmCrearUsuario.Designer.cs">
       <DependentUpon>frmCrearUsuario.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\FormCrearUsuario.resx">
-      <DependentUpon>FormCrearUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmUsuario.resx">
-      <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CrearUsuario.resx">
       <DependentUpon>CrearUsuario.cs</DependentUpon>
@@ -98,6 +92,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Prueba\frmPrincipalTest.resx">
+      <DependentUpon>frmPrincipalTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prueba\ucIniciarSesion.resx">
+      <DependentUpon>ucIniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuario\frmCrearUsuario.resx">
       <DependentUpon>frmCrearUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +115,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ApInfra\ApInfra.csproj">
+      <Project>{1e6dcc20-9ef6-4fcb-8e93-4c8567e4d439}</Project>
+      <Name>ApInfra</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ApVentaContracts\ApVentaContracts.csproj">
       <Project>{2d70fc9e-33a9-44b6-a078-4c5f51b990d0}</Project>
       <Name>ApVentaContracts</Name>

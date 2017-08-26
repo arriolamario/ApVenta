@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="ViewPrincipal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuarios\GestionUsuario.cs" />
     <Compile Include="View\ViewCrearUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +54,9 @@
       <Project>{2177dc27-aaa9-4655-851b-c1ab9b84726c}</Project>
       <Name>ApVentaDatos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Usuarios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

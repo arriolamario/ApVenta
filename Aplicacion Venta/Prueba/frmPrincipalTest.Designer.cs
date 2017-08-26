@@ -1,6 +1,6 @@
-﻿namespace Aplicacion_Venta.Forms
+﻿namespace Aplicacion_Venta.Prueba
 {
-    partial class frmPrincipal
+    partial class frmPrincipalTest
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-             this.scPrincipal = new System.Windows.Forms.SplitContainer();
+            this.scPrincipal = new System.Windows.Forms.SplitContainer();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tbUsuario = new System.Windows.Forms.MaskedTextBox();
@@ -53,7 +53,7 @@
             // scPrincipal.Panel1
             // 
             this.scPrincipal.Panel1.AutoScroll = true;
-            this.scPrincipal.Panel1.BackColor = System.Drawing.Color.White;
+            this.scPrincipal.Panel1.BackColor = System.Drawing.Color.Transparent;
             // 
             // scPrincipal.Panel2
             // 
@@ -79,6 +79,7 @@
             // 
             // label1
             // 
+            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(191, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 16);
@@ -97,6 +98,7 @@
             // 
             // lblUsuario
             // 
+            this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(806, 6);
             this.lblUsuario.Name = "lblUsuario";
@@ -126,6 +128,8 @@
             // 
             // frmPrincipalTest
             // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1064, 564);
             this.Controls.Add(this.pnlCenter);
@@ -135,6 +139,10 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmPrincipalTest";
             this.Text = "Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPrincipalTest_Load);
+            this.Resize += new System.EventHandler(this.frmPrincipalTest_Resize);
+            ((System.ComponentModel.ISupportInitialize)(this.scPrincipal)).EndInit();
             this.scPrincipal.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
@@ -142,8 +150,6 @@
             this.ResumeLayout(false);
 
         }
-
-       
 
         #endregion
 
@@ -154,6 +160,5 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Panel pnlCenter;
-
     }
 }

@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ApInfra;
+using ApVentaContracts.Entidades;
 namespace Aplicacion_Venta.Usuario
 {
     public partial class frmCrearUsuario : Form
@@ -32,7 +33,14 @@ namespace Aplicacion_Venta.Usuario
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            
+            UsuarioDTO usuario = new UsuarioDTO();
+
+            //usuario.Save();
+        }
+
+        private void frmCrearUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

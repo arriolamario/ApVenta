@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D70FC9E-33A9-44B6-A078-4C5F51B990D0}</ProjectGuid>
+    <ProjectGuid>{1E6DCC20-9EF6-4FCB-8E93-4C8567E4D439}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ApVentaContracts</RootNamespace>
-    <AssemblyName>ApVentaContracts</AssemblyName>
+    <RootNamespace>ApInfra</RootNamespace>
+    <AssemblyName>ApInfra</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,14 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enumerados\Enumerados.cs" />
-    <Compile Include="FactoryEntidades\FactoryEntidades.cs" />
-    <Compile Include="Interfaces\IEntidad.cs" />
-    <Compile Include="Consulta.cs" />
-    <Compile Include="Entidades\UsuarioDTO.cs" />
+    <Compile Include="ABM.cs" />
+    <Compile Include="StringCipher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ApVentaContracts\ApVentaContracts.csproj">
+      <Project>{2d70fc9e-33a9-44b6-a078-4c5f51b990d0}</Project>
+      <Name>ApVentaContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BaseConeccion\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

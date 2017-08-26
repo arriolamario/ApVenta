@@ -28,146 +28,155 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCrear = new System.Windows.Forms.Button();
-            this.tbPassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbUsuario = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbNombre = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbApellido = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.lblDocumento = new System.Windows.Forms.Label();
+            this.tbNumDocumento = new System.Windows.Forms.MaskedTextBox();
+            this.lblPassUsuario = new System.Windows.Forms.Label();
+            this.tbPassUsuario = new System.Windows.Forms.MaskedTextBox();
+            this.lblNomUsuario = new System.Windows.Forms.Label();
+            this.tbNomUsuario = new System.Windows.Forms.MaskedTextBox();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.tbApellido = new System.Windows.Forms.MaskedTextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.tbNombre = new ControlesPersonalizados.TextBoxEx();
             this.SuspendLayout();
             // 
-            // btnCrear
+            // btnCargar
             // 
-            this.btnCrear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCrear.Location = new System.Drawing.Point(204, 308);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(75, 23);
-            this.btnCrear.TabIndex = 0;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCargar.Location = new System.Drawing.Point(224, 197);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(87, 28);
+            this.btnCargar.TabIndex = 26;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
             // 
-            // tbPassword
+            // lblDocumento
             // 
-            this.tbPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbPassword.Location = new System.Drawing.Point(300, 247);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(100, 20);
-            this.tbPassword.TabIndex = 1;
+            this.lblDocumento.AutoSize = true;
+            this.lblDocumento.Location = new System.Drawing.Point(194, 134);
+            this.lblDocumento.Name = "lblDocumento";
+            this.lblDocumento.Size = new System.Drawing.Size(139, 16);
+            this.lblDocumento.TabIndex = 25;
+            this.lblDocumento.Text = "Numero de documento";
             // 
-            // label1
+            // tbNumDocumento
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(324, 215);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Password";
+            this.tbNumDocumento.Location = new System.Drawing.Point(138, 154);
+            this.tbNumDocumento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbNumDocumento.Name = "tbNumDocumento";
+            this.tbNumDocumento.Size = new System.Drawing.Size(251, 22);
+            this.tbNumDocumento.TabIndex = 24;
             // 
-            // label2
+            // lblPassUsuario
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(99, 208);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Usuario";
+            this.lblPassUsuario.AutoSize = true;
+            this.lblPassUsuario.Location = new System.Drawing.Point(361, 14);
+            this.lblPassUsuario.Name = "lblPassUsuario";
+            this.lblPassUsuario.Size = new System.Drawing.Size(74, 16);
+            this.lblPassUsuario.TabIndex = 23;
+            this.lblPassUsuario.Text = "Contraseña";
             // 
-            // tbUsuario
+            // tbPassUsuario
             // 
-            this.tbUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbUsuario.Location = new System.Drawing.Point(70, 240);
-            this.tbUsuario.Name = "tbUsuario";
-            this.tbUsuario.Size = new System.Drawing.Size(100, 20);
-            this.tbUsuario.TabIndex = 6;
+            this.tbPassUsuario.Location = new System.Drawing.Point(273, 33);
+            this.tbPassUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbPassUsuario.Name = "tbPassUsuario";
+            this.tbPassUsuario.Size = new System.Drawing.Size(251, 22);
+            this.tbPassUsuario.TabIndex = 22;
+            this.tbPassUsuario.UseSystemPasswordChar = true;
             // 
-            // label3
+            // lblNomUsuario
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(324, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Nombre";
+            this.lblNomUsuario.AutoSize = true;
+            this.lblNomUsuario.Location = new System.Drawing.Point(86, 14);
+            this.lblNomUsuario.Name = "lblNomUsuario";
+            this.lblNomUsuario.Size = new System.Drawing.Size(101, 16);
+            this.lblNomUsuario.TabIndex = 19;
+            this.lblNomUsuario.Text = "Nombre Usuario";
             // 
-            // tbNombre
+            // tbNomUsuario
             // 
-            this.tbNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbNombre.Location = new System.Drawing.Point(296, 158);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(100, 20);
-            this.tbNombre.TabIndex = 8;
+            this.tbNomUsuario.Location = new System.Drawing.Point(11, 33);
+            this.tbNomUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbNomUsuario.Name = "tbNomUsuario";
+            this.tbNomUsuario.Size = new System.Drawing.Size(251, 22);
+            this.tbNomUsuario.TabIndex = 18;
             // 
-            // label4
+            // lblApellido
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(99, 126);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Apellido";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(371, 74);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(54, 16);
+            this.lblApellido.TabIndex = 17;
+            this.lblApellido.Text = "Apellido";
             // 
             // tbApellido
             // 
-            this.tbApellido.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbApellido.Location = new System.Drawing.Point(71, 158);
+            this.tbApellido.Location = new System.Drawing.Point(273, 94);
+            this.tbApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbApellido.Name = "tbApellido";
-            this.tbApellido.Size = new System.Drawing.Size(100, 20);
-            this.tbApellido.TabIndex = 10;
+            this.tbApellido.Size = new System.Drawing.Size(251, 22);
+            this.tbApellido.TabIndex = 16;
             // 
-            // panel1
+            // lblNombre
             // 
-            this.panel1.Controls.Add(this.btnCrear);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.tbPassword);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.tbUsuario);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.tbNombre);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.tbApellido);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(502, 471);
-            this.panel1.TabIndex = 12;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(110, 74);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(53, 16);
+            this.lblNombre.TabIndex = 15;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // tbNombre
+            // 
+            this.tbNombre.borrar = false;
+            this.tbNombre.Location = new System.Drawing.Point(11, 94);
+            this.tbNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(251, 22);
+            this.tbNombre.TabIndex = 14;
+            this.tbNombre.TipoValidador = ControlesPersonalizados.TipoValidador.SoloLetras;
             // 
             // CrearUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.btnCargar);
+            this.Controls.Add(this.lblDocumento);
+            this.Controls.Add(this.tbNumDocumento);
+            this.Controls.Add(this.lblPassUsuario);
+            this.Controls.Add(this.tbPassUsuario);
+            this.Controls.Add(this.lblNomUsuario);
+            this.Controls.Add(this.tbNomUsuario);
+            this.Controls.Add(this.lblApellido);
+            this.Controls.Add(this.tbApellido);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.tbNombre);
+            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CrearUsuario";
-            this.Size = new System.Drawing.Size(502, 471);
-            this.Load += new System.EventHandler(this.CrearUsuario_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Size = new System.Drawing.Size(537, 236);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnCrear;
-        private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbUsuario;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbNombre;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbApellido;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.Label lblDocumento;
+        private System.Windows.Forms.MaskedTextBox tbNumDocumento;
+        private System.Windows.Forms.Label lblPassUsuario;
+        private System.Windows.Forms.MaskedTextBox tbPassUsuario;
+        private System.Windows.Forms.Label lblNomUsuario;
+        private System.Windows.Forms.MaskedTextBox tbNomUsuario;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.MaskedTextBox tbApellido;
+        private System.Windows.Forms.Label lblNombre;
+        private ControlesPersonalizados.TextBoxEx tbNombre;
 
     }
 }

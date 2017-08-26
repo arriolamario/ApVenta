@@ -29,33 +29,26 @@ namespace Aplicacion_Venta.Usuario
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbNombre = new TextBoxEx();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.tbApellido = new TextBoxEx();
             this.lblNomUsuario = new System.Windows.Forms.Label();
-            this.tbNomUsuario = new TextBoxEx();
             this.cbRolUsuario = new System.Windows.Forms.ComboBox();
             this.lblRolUsuario = new System.Windows.Forms.Label();
             this.lblPassUsuario = new System.Windows.Forms.Label();
-            this.tbPassUsuario = new TextBoxEx();
             this.lblDocumento = new System.Windows.Forms.Label();
-            this.tbNumDocumento = new TextBoxEx();
             this.btnCargar = new System.Windows.Forms.Button();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
+            this.tbNumDocumento = new ControlesPersonalizados.TextBoxEx();
+            this.tbPassUsuario = new ControlesPersonalizados.TextBoxEx();
+            this.tbNomUsuario = new ControlesPersonalizados.TextBoxEx();
+            this.tbApellido = new ControlesPersonalizados.TextBoxEx();
+            this.tbNombre = new ControlesPersonalizados.TextBoxEx();
             this.SuspendLayout();
-            // 
-            // tbNombre
-            // 
-            this.tbNombre.Location = new System.Drawing.Point(255, 149);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(216, 20);
-            this.tbNombre.TabIndex = 0;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(357, 133);
+            this.lblNombre.Location = new System.Drawing.Point(414, 103);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 1;
@@ -64,39 +57,25 @@ namespace Aplicacion_Venta.Usuario
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(357, 182);
+            this.lblApellido.Location = new System.Drawing.Point(414, 152);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(44, 13);
             this.lblApellido.TabIndex = 3;
             this.lblApellido.Text = "Apellido";
             // 
-            // tbApellido
-            // 
-            this.tbApellido.Location = new System.Drawing.Point(255, 198);
-            this.tbApellido.Name = "tbApellido";
-            this.tbApellido.Size = new System.Drawing.Size(216, 20);
-            this.tbApellido.TabIndex = 2;
-            // 
             // lblNomUsuario
             // 
             this.lblNomUsuario.AutoSize = true;
-            this.lblNomUsuario.Location = new System.Drawing.Point(331, 231);
+            this.lblNomUsuario.Location = new System.Drawing.Point(388, 201);
             this.lblNomUsuario.Name = "lblNomUsuario";
             this.lblNomUsuario.Size = new System.Drawing.Size(83, 13);
             this.lblNomUsuario.TabIndex = 5;
             this.lblNomUsuario.Text = "Nombre Usuario";
             // 
-            // tbNomUsuario
-            // 
-            this.tbNomUsuario.Location = new System.Drawing.Point(255, 247);
-            this.tbNomUsuario.Name = "tbNomUsuario";
-            this.tbNomUsuario.Size = new System.Drawing.Size(216, 20);
-            this.tbNomUsuario.TabIndex = 4;
-            // 
             // cbRolUsuario
             // 
             this.cbRolUsuario.FormattingEnabled = true;
-            this.cbRolUsuario.Location = new System.Drawing.Point(480, 247);
+            this.cbRolUsuario.Location = new System.Drawing.Point(537, 217);
             this.cbRolUsuario.Name = "cbRolUsuario";
             this.cbRolUsuario.Size = new System.Drawing.Size(216, 21);
             this.cbRolUsuario.TabIndex = 6;
@@ -104,7 +83,7 @@ namespace Aplicacion_Venta.Usuario
             // lblRolUsuario
             // 
             this.lblRolUsuario.AutoSize = true;
-            this.lblRolUsuario.Location = new System.Drawing.Point(559, 231);
+            this.lblRolUsuario.Location = new System.Drawing.Point(616, 201);
             this.lblRolUsuario.Name = "lblRolUsuario";
             this.lblRolUsuario.Size = new System.Drawing.Size(67, 13);
             this.lblRolUsuario.TabIndex = 7;
@@ -113,38 +92,24 @@ namespace Aplicacion_Venta.Usuario
             // lblPassUsuario
             // 
             this.lblPassUsuario.AutoSize = true;
-            this.lblPassUsuario.Location = new System.Drawing.Point(579, 133);
+            this.lblPassUsuario.Location = new System.Drawing.Point(636, 103);
             this.lblPassUsuario.Name = "lblPassUsuario";
             this.lblPassUsuario.Size = new System.Drawing.Size(61, 13);
             this.lblPassUsuario.TabIndex = 9;
             this.lblPassUsuario.Text = "Contraseña";
             // 
-            // tbPassUsuario
-            // 
-            this.tbPassUsuario.Location = new System.Drawing.Point(477, 149);
-            this.tbPassUsuario.Name = "tbPassUsuario";
-            this.tbPassUsuario.Size = new System.Drawing.Size(216, 20);
-            this.tbPassUsuario.TabIndex = 8;
-            // 
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Location = new System.Drawing.Point(538, 182);
+            this.lblDocumento.Location = new System.Drawing.Point(595, 152);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(115, 13);
             this.lblDocumento.TabIndex = 11;
             this.lblDocumento.Text = "Numero de documento";
             // 
-            // tbNumDocumento
-            // 
-            this.tbNumDocumento.Location = new System.Drawing.Point(477, 198);
-            this.tbNumDocumento.Name = "tbNumDocumento";
-            this.tbNumDocumento.Size = new System.Drawing.Size(216, 20);
-            this.tbNumDocumento.TabIndex = 10;
-            // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(551, 301);
+            this.btnCargar.Location = new System.Drawing.Point(608, 271);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(75, 23);
             this.btnCargar.TabIndex = 12;
@@ -154,13 +119,59 @@ namespace Aplicacion_Venta.Usuario
             // 
             // btnLimpiarCampos
             // 
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(334, 301);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(391, 271);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiarCampos.TabIndex = 13;
             this.btnLimpiarCampos.Text = "Limpiar";
             this.btnLimpiarCampos.UseVisualStyleBackColor = true;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
+            // 
+            // tbNumDocumento
+            // 
+            this.tbNumDocumento.borrar = false;
+            this.tbNumDocumento.Location = new System.Drawing.Point(534, 168);
+            this.tbNumDocumento.Name = "tbNumDocumento";
+            this.tbNumDocumento.Size = new System.Drawing.Size(216, 20);
+            this.tbNumDocumento.TabIndex = 10;
+            this.tbNumDocumento.TipoValidador = ControlesPersonalizados.TipoValidador.SoloNumero;
+            // 
+            // tbPassUsuario
+            // 
+            this.tbPassUsuario.borrar = false;
+            this.tbPassUsuario.Location = new System.Drawing.Point(534, 119);
+            this.tbPassUsuario.Name = "tbPassUsuario";
+            this.tbPassUsuario.Size = new System.Drawing.Size(216, 20);
+            this.tbPassUsuario.TabIndex = 8;
+            this.tbPassUsuario.TipoValidador = ControlesPersonalizados.TipoValidador.LetrasNumeros;
+            this.tbPassUsuario.UseSystemPasswordChar = true;
+            // 
+            // tbNomUsuario
+            // 
+            this.tbNomUsuario.borrar = false;
+            this.tbNomUsuario.Location = new System.Drawing.Point(312, 217);
+            this.tbNomUsuario.Name = "tbNomUsuario";
+            this.tbNomUsuario.Size = new System.Drawing.Size(216, 20);
+            this.tbNomUsuario.TabIndex = 4;
+            this.tbNomUsuario.TipoValidador = ControlesPersonalizados.TipoValidador.SoloLetras;
+            // 
+            // tbApellido
+            // 
+            this.tbApellido.borrar = false;
+            this.tbApellido.Location = new System.Drawing.Point(312, 168);
+            this.tbApellido.Name = "tbApellido";
+            this.tbApellido.Size = new System.Drawing.Size(216, 20);
+            this.tbApellido.TabIndex = 2;
+            this.tbApellido.TipoValidador = ControlesPersonalizados.TipoValidador.SoloLetras;
+            // 
+            // tbNombre
+            // 
+            this.tbNombre.borrar = false;
+            this.tbNombre.Location = new System.Drawing.Point(312, 119);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(216, 20);
+            this.tbNombre.TabIndex = 0;
+            this.tbNombre.TipoValidador = ControlesPersonalizados.TipoValidador.SoloLetras;
             // 
             // frmCrearUsuario
             // 
@@ -183,6 +194,7 @@ namespace Aplicacion_Venta.Usuario
             this.Controls.Add(this.tbNombre);
             this.Name = "frmCrearUsuario";
             this.Text = "Usuario";
+            this.Load += new System.EventHandler(this.frmCrearUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
