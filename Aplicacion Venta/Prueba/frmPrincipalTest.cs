@@ -13,14 +13,10 @@ namespace Aplicacion_Venta.Prueba
 {
     public partial class frmPrincipalTest : Form
     {
-        ucIniciarSesion viewIniciarSesion;
         int numeroButton;
         public frmPrincipalTest()
         {
             InitializeComponent();
-            //viewIniciarSesion = new ucIniciarSesion();
-            //viewIniciarSesion.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            //scPrincipal.Panel2.Controls.Add(viewIniciarSesion);
             CambiarViewPrincipal(new ucIniciarSesion());
             numeroButton = 0;
             CargarBotonesTemporales();
@@ -98,6 +94,7 @@ namespace Aplicacion_Venta.Prueba
 
 
         }
+
 
         private void CambiarViewPrincipal(Control view)
         {
