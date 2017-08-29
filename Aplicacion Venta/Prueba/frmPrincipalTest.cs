@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aplicacion_Venta.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,16 +18,34 @@ namespace Aplicacion_Venta.Prueba
         public frmPrincipalTest()
         {
             InitializeComponent();
-            viewIniciarSesion = new ucIniciarSesion();
-            viewIniciarSesion.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            scPrincipal.Panel2.Controls.Add(viewIniciarSesion);
+            //viewIniciarSesion = new ucIniciarSesion();
+            //viewIniciarSesion.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            //scPrincipal.Panel2.Controls.Add(viewIniciarSesion);
+            CambiarViewPrincipal(new ucIniciarSesion());
             numeroButton = 0;
+            CargarBotonesTemporales();
+        }
+
+        private void CargarBotonesTemporales()
+        {
+            Button buttonCrearUsuario = new Button();
+            buttonCrearUsuario.Dock = DockStyle.Top;
+            buttonCrearUsuario.Name = "btnCrearUsuario";
+            buttonCrearUsuario.Text = "Crear Usuario";
+            buttonCrearUsuario.Click += ButtonCrearUsuario_Click;
+            scPrincipal.Panel1.Controls.Add(buttonCrearUsuario);
+
+            
+        }
+
+        private void ButtonCrearUsuario_Click(object sender, EventArgs e)
+        {
+            CambiarViewPrincipal(new CrearUsuario());
         }
 
         private void btnIniciarSecion_Click(object sender, EventArgs e)
         {
-            scPrincipal.Panel2.Controls.Clear();
-            scPrincipal.Panel2.Controls.Add(new ucIniciarSesion());
+            CambiarViewPrincipal(new ucIniciarSesion());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -78,6 +97,13 @@ namespace Aplicacion_Venta.Prueba
             }
 
 
+        }
+
+        private void CambiarViewPrincipal(Control view)
+        {
+            scPrincipal.Panel2.Controls.Clear();
+            view.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            scPrincipal.Panel2.Controls.Add(view);
         }
 
 

@@ -38,7 +38,7 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.tbApellido = new System.Windows.Forms.MaskedTextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.tbNombre = new ControlesPersonalizados.TextBoxEx();
+            this.tbNombre = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // btnCargar
@@ -50,6 +50,7 @@
             this.btnCargar.TabIndex = 26;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // lblDocumento
             // 
@@ -131,13 +132,11 @@
             // 
             // tbNombre
             // 
-            this.tbNombre.borrar = false;
             this.tbNombre.Location = new System.Drawing.Point(11, 94);
             this.tbNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(251, 22);
             this.tbNombre.TabIndex = 14;
-            this.tbNombre.TipoValidador = ControlesPersonalizados.TipoValidador.SoloLetras;
             // 
             // CrearUsuario
             // 
@@ -176,7 +175,7 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.MaskedTextBox tbApellido;
         private System.Windows.Forms.Label lblNombre;
-        private ControlesPersonalizados.TextBoxEx tbNombre;
+        private System.Windows.Forms.MaskedTextBox tbNombre;
 
     }
 }
