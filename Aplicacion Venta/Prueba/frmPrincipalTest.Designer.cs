@@ -60,7 +60,7 @@
             this.scPrincipal.Panel2.AutoScroll = true;
             this.scPrincipal.Panel2.BackColor = System.Drawing.Color.White;
             this.scPrincipal.Size = new System.Drawing.Size(1064, 377);
-            this.scPrincipal.SplitterDistance = 206;
+            this.scPrincipal.SplitterDistance = 205;
             this.scPrincipal.SplitterWidth = 9;
             this.scPrincipal.TabIndex = 0;
             // 
