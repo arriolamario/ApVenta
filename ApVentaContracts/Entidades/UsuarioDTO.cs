@@ -19,7 +19,7 @@ namespace ApVentaContracts.Entidades
         public string Apellido { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public int IdTipoUusario { get; set; }
+        public string Documento { get; set; }
 
         public string GetNombreSp(Enumerados.MovimientoBase movimiento)
         {
