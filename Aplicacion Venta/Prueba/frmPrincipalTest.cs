@@ -80,6 +80,20 @@ namespace Aplicacion_Venta.Prueba
 
         private void frmPrincipalTest_Resize(object sender, EventArgs e)
         {
+            CentrarFormulario();
+        }
+
+
+        private void CambiarViewPrincipal(Control view)
+        {
+            scPrincipal.Panel2.Controls.Clear();
+            view.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            scPrincipal.Panel2.Controls.Add(view);
+            CentrarFormulario();
+        }
+
+        private void CentrarFormulario()
+        {
             foreach (Control item in scPrincipal.Panel2.Controls)
             {
                 int medioPanelHeight = scPrincipal.Panel2.Height / 2;
@@ -91,16 +105,6 @@ namespace Aplicacion_Venta.Prueba
                 int y = (medioPanelHeight - medioItemHeight) > 0 ? (medioPanelHeight - medioItemHeight) : 0;
                 item.Location = new Point(x, y);
             }
-
-
-        }
-
-
-        private void CambiarViewPrincipal(Control view)
-        {
-            scPrincipal.Panel2.Controls.Clear();
-            view.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            scPrincipal.Panel2.Controls.Add(view);
         }
 
 
